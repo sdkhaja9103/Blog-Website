@@ -1,0 +1,187 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+}
+
+header {
+    background: #ffda61; /* Coral color for header */
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffe0e0; /* Light pink on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main {
+    flex: 2;
+    margin-right: 1.5rem;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+aside {
+    flex: 1;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+article {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+article h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #61ff9e; /* Coral color for post titles */
+    transition: color 0.3s ease;
+}
+
+article h2:hover {
+    color: #d94fa4; /* Darker coral color on hover */
+}
+
+.author {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border: 2px solid #e7ff61; /* Coral border around the image */
+    transition: transform 0.3s ease;
+}
+
+.post-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+footer {
+    background: #007bff; /* Bright blue for footer */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 4px solid #0056b3; /* Darker blue border for footer */
+    animation: fadeIn 1s ease-in-out;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #e0e0e0; /* Light gray on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    main {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    aside {
+        box-shadow: none;
+    }
+}
